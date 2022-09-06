@@ -25,3 +25,6 @@ Collecting pytz
   Using cached pytz-2021.1-py2.py3-none-any.whl (510 kB)
 Installing collected packages: sqlparse, pytz, Django
 Successfully installed Django-2.2.19 pytz-2021.1 sqlparse-0.4.1 
+
+
+pip install -r requirements.txt 
