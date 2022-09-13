@@ -9,7 +9,7 @@
 Разработал Руслан Ковальский
 
 # python3, обнови менеджер пакетов pip!
-(venv)...$ python3 -m pip install --upgrade pip
+(venv)...$ python -m pip install --upgrade pip
 # Нажимаем <enter>
 
 # Менеджер пакетов pip, поставь мне, Django версии 2.2.19!
