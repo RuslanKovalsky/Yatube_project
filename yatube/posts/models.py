@@ -1,18 +1,13 @@
-from django.db import models
 
-# Create your models here.
 from django.db import models
-# Из модуля auth импортируем функцию get_user_model
 from django.contrib.auth import get_user_model
-#Для работы с моделями импортируется модуль models,
-# а для создания поля со ссылкой на модель User
-# импортируется и эта модель: она встроена в
-# Django и отвечает за управление пользователями.
-#Официальная документация рекомендует
-#обращаться к модели User через функцию g
-#et_user_model. Следуем этой рекомендации:
 
 User = get_user_model()
+
+class Group(models.Model):
+    title = models.TextField()
+    slug = models.URLField()
+    description = models.TextField()
 
 
 class Post(models.Model):
@@ -23,3 +18,12 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         related_name='posts'
     )
+    group = models.ForeignKey(
+        Group,
+        blank=True,
+        null=True,
+        on_delete=models.CASCADE,
+        related_name='group'
+    )
+
+
