@@ -15,7 +15,6 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ('text',)
     list_filter = ('pub_date',)
     empty_value_display = '-пусто-'
-    list_editable = ('group',)
 
 
 class GroupAdmin(admin.ModelAdmin):
@@ -28,3 +27,6 @@ admin.site.register(Group, GroupAdmin)
 
 
 
+"""Для настройки отображения модели в интерфейсе
+ админки применяют класс ModelAdmin. Он связывается с 
+ моделью и конфигурирует отображение данных этой модели"""

@@ -22,7 +22,7 @@ def index(request):
     return render(request, 'posts/index.html', context)
 
 
-def group_posts(request, slug):
+def group_list(request, slug):
     # Страничка где лежат списки сообществ
     # Функция get_object_or_404 получает по заданным критериям объект
     # из базы данных или возвращает сообщение об ошибке, если объект не найден.
